@@ -2,8 +2,8 @@
 Exam 1, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Ryan Walter.  March 2018.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -97,6 +97,17 @@ def problem3(rect, n, window):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
+    rect.attach_to(window)
+    window.render(.05)
+    radius = (rect.get_height())/2
+    circle = rg.Circle(rect.get_lower_right_corner(),radius)
+    circle.attach_to(window)
+    window.render()
+    for k in range(n):
+        center = rg.Point(circle.center.x + 1.5*radius, circle.center.y + 1.5*radius)
+        circle = rg.Circle(center,radius)
+        circle.attach_to(window)
+    window.render(.05)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

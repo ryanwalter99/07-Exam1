@@ -2,8 +2,8 @@
 Exam 1, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Ryan Walter.  March 2018.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -111,6 +111,8 @@ def run_test_problem4():
     print('  Actual:  ', answer)
 
 
+
+
 def problem4(m):
     """
     What comes in:  Positive integer m.
@@ -138,6 +140,16 @@ def problem4(m):
     # TODO: 7. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    count = -1
+    for k in range(m):
+        if k > 0:
+            if m %k == 0:
+                count = count + 1
+
+
+    return count
+
 
 
 # -----------------------------------------------------------------------------
